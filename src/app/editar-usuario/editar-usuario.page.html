@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>editar-usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list style="padding: 1rem; gap: 1rem; display: flex; flex-direction: column">
+    <ion-input [(ngModel)]="nome" type="text" fill="outline" label="Nome" labelPlacement="floating"
+      helperText="Nome Completo" ngModel text></ion-input>
+
+    <ion-input [(ngModel)]="job" type="text" fill="outline" label="Emprego" labelPlacement="floating"
+      helperText="Sua Profissão" ngModel text></ion-input>
+
+    <ion-button expand="block" color="dark" (click)="salvar()">Editar</ion-button>
+  </ion-list>
+</ion-content>

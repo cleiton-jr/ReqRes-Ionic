@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>lista-usuarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+    <ion-button expand="full"  [routerLink]="['/criar-usuario']">Criar Usuario</ion-button>
+
+  <ion-item *ngFor="let usuario of listaUsuarios">
+    <ion-label>
+      <h1>{{usuario.first_name}} {{usuario.last_name}}</h1>
+      <p>{{usuario.email}}</p>
+    </ion-label>
+    <ion-button [routerLink]="['/editar-usuario',usuario.id]"><ion-icon name="create"></ion-icon></ion-button>
+  </ion-item>
+</ion-content>
